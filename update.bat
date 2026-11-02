@@ -9,6 +9,9 @@ REM thanks chatgpt (reads the contents of the file and stores it in a variable):
 for /f "delims=" %%A in (%scriptDirFile%) do set "scriptDir=%%A"
 REM go to the directory that the original app was running in, then download and run the update
 cd %scriptDir%
+REM delete junk files (idk how to delete the updater itself without doing some annoying workarounds and whatever + its probably not a big issue)
+del /f /q %userprofile%\jjboi-programs\4DSkinCreator\scriptdir.txt
+del /f /q %userprofile%\jjboi-programs\4DSkinCreator\version.txt
 
 cls
 
